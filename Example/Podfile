@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'EDSTouchButton', :exclusive => true do
+  pod "EDSTouchButton", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "EDSTouchButton", :path => "../"
+
+  
+end
