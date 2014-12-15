@@ -42,6 +42,11 @@ To use the button in your project:
 
 You can also add it on your storyboard and edit its properties directly in the Attributes Inspector.
 
+## To do
+
+- Add simple tests.
+- Add UIImageView to button.
+
 ## Author
 
 Eduardo Diaz Sancha, edsancha@gmail.com
