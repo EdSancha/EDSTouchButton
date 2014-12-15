@@ -23,6 +23,8 @@ it, simply add the following line to your Podfile:
     pod "EDSTouchButton"
 
 
+## Usage
+
 To use the button in your project:
 
     EDSTouchButton *button = [[EDSTouchButton alloc] initWithFrame:CGRectMake(20, 100, CGRectGetWidth(self.view.frame) - 40, 44)
@@ -39,13 +41,6 @@ To use the button in your project:
     [self.view addSubview:button];
 
 You can also add it on your storyboard and edit its properties directly in the Attributes Inspector.
-
-## Usage
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-Another way to run the example project is running `pod try EDSTouchButton` in terminal.
-
 
 ## Author
 
