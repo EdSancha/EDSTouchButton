@@ -26,3 +26,8 @@ eduardo diaz sancha, edsancha@gmail.com
 
 EDSTouchButton is available under the MIT license. See the LICENSE file for more info.
 
+=======
+EDSTouchButton
+==============
+
+Animated Button mimicking Material Design animation using Pop
