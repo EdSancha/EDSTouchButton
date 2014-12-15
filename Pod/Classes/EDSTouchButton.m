@@ -198,7 +198,7 @@ static const float kDefaultCornerRadius = 5.f;
     anim.dynamicsTension = 2000;
     anim.fromValue = [NSValue valueWithCGPoint:self.touchView.center];
     anim.toValue = [NSValue valueWithCGPoint:pt];
-    [anim setValue:@"touchAnim" forKey:@"animName"];
+    [anim setValue:@"touchAnim" forKey:@"animationName"];
     [anim setValue:self.touchView forKey:@"rippleObject"];
     anim.delegate = self;
     [self.touchView pop_addAnimation:anim forKey:@"moveTouchView"];
@@ -232,21 +232,21 @@ static const float kDefaultCornerRadius = 5.f;
 - (void)pop_animationDidStop:(POPAnimation *)anim finished:(BOOL)finished {
     
     if (finished) {
-        if ([[anim valueForKey:@"animName"] isEqualToString:@"progressBar"]){
+        if ([[anim valueForKey:@"animationName"] isEqualToString:@"animatedView"]){
             
             UIView *rippleEffect = [anim valueForKey:@"rippleObject"];
 
             POPBasicAnimation *alpha = [POPBasicAnimation animationWithPropertyNamed:kPOPViewAlpha];
             alpha.duration = kDefaultDuration/3;
             alpha.toValue = @(0.f);
-            [anim setValue:@"dilute" forKey:@"animName"];
+            [anim setValue:@"dilute" forKey:@"animationName"];
             [anim setValue:rippleEffect forKey:@"rippleObject"];
 
             [rippleEffect pop_addAnimation:alpha forKey:@"alpha"];
             
             [self sendActionsForControlEvents:UIControlEventTouchUpInside];
             
-        } else if ([[anim valueForKey:@"animName"] isEqualToString:@"dilute"]){
+        } else if ([[anim valueForKey:@"animationName"] isEqualToString:@"dilute"]){
             
             UIView *rippleEffect = [anim valueForKey:@"rippleObject"];
             [rippleEffect removeFromSuperview];
@@ -286,12 +286,12 @@ static const float kDefaultCornerRadius = 5.f;
     POPBasicAnimation *anim = [POPBasicAnimation animationWithPropertyNamed:kPOPViewSize];
     anim.fromValue = [NSValue valueWithCGSize:rippleEffect.frame.size];
     anim.toValue = [NSValue valueWithCGSize:CGSizeMake(self.frame.size.width*2, self.frame.size.width*2)];
-    [anim setValue:@"progressBar" forKey:@"animName"];
+    [anim setValue:@"animatedView" forKey:@"animationName"];
     [anim setValue:rippleEffect forKey:@"rippleObject"];
     anim.delegate = self;
     anim.duration = kDefaultDuration;
     anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    [rippleEffect pop_addAnimation:anim forKey:@"progressBar"];
+    [rippleEffect pop_addAnimation:anim forKey:@"animatedView"];
     
     POPBasicAnimation *cornerRad = [POPBasicAnimation animation];
     POPAnimatableProperty *cornerRadius = [POPAnimatableProperty propertyWithName:@"layer.cornerRadius"

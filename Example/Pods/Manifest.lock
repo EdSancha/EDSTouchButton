@@ -1,0 +1,17 @@
+PODS:
+  - EDSTouchButton (0.0.1):
+    - pop
+  - pop (1.0.7)
+
+DEPENDENCIES:
+  - EDSTouchButton (from `../`)
+
+EXTERNAL SOURCES:
+  EDSTouchButton:
+    :path: ../
+
+SPEC CHECKSUMS:
+  EDSTouchButton: 66fdd36b0889f485bb2115f767f59acc8e45926b
+  pop: 2f14a1ea61339767af9e66741b418c831b3844df
+
+COCOAPODS: 0.35.0
