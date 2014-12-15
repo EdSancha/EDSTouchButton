@@ -1,6 +1,6 @@
 # EDSTouchButton
 
-[![CI Status](http://img.shields.io/travis/eduardo diaz sancha/EDSTouchButton.svg?style=flat)](https://travis-ci.org/eduardo diaz sancha/EDSTouchButton)
+[![Build Status](https://travis-ci.org/EdSancha/EDSTouchButton.svg?branch=master)](https://travis-ci.org/EdSancha/EDSTouchButton)
 [![Version](https://img.shields.io/cocoapods/v/EDSTouchButton.svg?style=flat)](http://cocoadocs.org/docsets/EDSTouchButton)
 [![License](https://img.shields.io/cocoapods/l/EDSTouchButton.svg?style=flat)](http://cocoadocs.org/docsets/EDSTouchButton)
 [![Platform](https://img.shields.io/cocoapods/p/EDSTouchButton.svg?style=flat)](http://cocoadocs.org/docsets/EDSTouchButton)
@@ -46,6 +46,7 @@ You can also add it on your storyboard and edit its properties directly in the A
 
 - Add simple tests.
 - Add UIImageView to button.
+- Check why importing the files directly triggers IB_DESIGNABLE but not using PODS.
 
 ## Author
 
